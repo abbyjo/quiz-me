@@ -1,3 +1,15 @@
 *{
     list-style: none;
 }
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    padding:3%;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 8%;
+}
