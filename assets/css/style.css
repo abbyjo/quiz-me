@@ -1,5 +1,6 @@
 *{
     list-style: none;
+    font-family: monospace;
 }
 
 header ul {
@@ -10,6 +11,15 @@ header ul {
 section {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     padding: 8%;
+}
+button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #b47db8;
+    color: white;
+    font-size:150%;
+    cursor: pointer;
 }
