@@ -7,13 +7,22 @@ header ul {
     display: flex;
     justify-content: space-around;
     padding:3%;
+    font-size: 125%;
 }
 section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 8%;
+    padding-top:0;
+}
+p {
+    font-size:125%
+}
+h1 {
+    font-size: 200%;
 }
 button {
     padding: 15px 30px;
