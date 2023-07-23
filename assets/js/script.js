@@ -21,12 +21,12 @@ startButton.addEventListener("click", function() {
         secondsLeft--;
         if (secondsLeft === 0) {clearInterval(timer)};
     }, 1000);
-    questionContent.textContent = "Question 1";
+    questionContent.textContent = "Commonly used data types do NOT include:";
     inputContent.innerHTML = 
         `<ul>
-            <li><button id="A1">Answer 1</button></li>
-            <li><button id="A2">Answer 2</button></li>
-            <li><button id="A3">Answer 3</button></li>
-            <li><button id="A4">Answer 4</button></li>
+            <li><button id="A1">1.Strings</button></li>
+            <li><button id="A2">2.Booleans</button></li>
+            <li><button id="A3">3.Alerts</button></li>
+            <li><button id="A4">4.Numbers</button></li>
         </ul>`
 })
