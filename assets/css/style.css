@@ -40,3 +40,6 @@ button:hover {
     color:#b47db8;
     font-weight: bolder;
 }
+#input button{
+    margin: 5%;
+}

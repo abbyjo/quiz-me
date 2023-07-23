@@ -14,13 +14,15 @@
     //TO-DO: starts first question
 var startButton = document.querySelector("#button");
 var questionContent = document.querySelector("#content");
-var countdown = document.querySelector("#timer")
-var secondsLeft = 101
+var countdown = document.querySelector("#timer");
+var inputContent = document.querySelector("#input");
+var secondsLeft = 100
 
 startButton.addEventListener("click", function() {
     var timer = setInterval(function (){
-        secondsLeft--;
         countdown.textContent = `Timer: ${secondsLeft}`;
-
+        secondsLeft--;
     }, 1000);
+    questionContent.textContent = "Question 1";
+    inputContent.innerHTML = "<ul><li><button>Answer 1</button></li><li><button>Answer 2</button></li><li><button>Answer 3</button></li><li><button>Answer 4</button></li>"
 })
