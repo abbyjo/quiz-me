@@ -8,10 +8,7 @@
 //TO-DO: can view high scores by clicking #highscores
     //TO-DO: clicking highscores section reveals logged info.. ? 
     // promble: how to log multiple high scores?? 
-//============================================ CODE BELOW
-    //TO-DO:set up event listener for first button click --CHECK
-    //TO-DO: set up timer start 
-    //TO-DO: starts first question
+//===================== CODE BELOW
 var startButton = document.querySelector("#button");
 var questionContent = document.querySelector("#content");
 var countdown = document.querySelector("#timer");
@@ -22,7 +19,14 @@ startButton.addEventListener("click", function() {
     var timer = setInterval(function (){
         countdown.textContent = `Timer: ${secondsLeft}`;
         secondsLeft--;
+        if (secondsLeft === 0) {clearInterval(timer)};
     }, 1000);
     questionContent.textContent = "Question 1";
-    inputContent.innerHTML = "<ul><li><button>Answer 1</button></li><li><button>Answer 2</button></li><li><button>Answer 3</button></li><li><button>Answer 4</button></li>"
+    inputContent.innerHTML = 
+        `<ul>
+            <li><button id="A1">Answer 1</button></li>
+            <li><button id="A2">Answer 2</button></li>
+            <li><button id="A3">Answer 3</button></li>
+            <li><button id="A4">Answer 4</button></li>
+        </ul>`
 })
