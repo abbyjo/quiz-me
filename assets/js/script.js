@@ -15,18 +15,21 @@ var countdown = document.querySelector("#timer");
 var inputContent = document.querySelector("#input");
 var secondsLeft = 100
 
+function nextQuestion(question,a,b,c,d) {
+    questionContent.textContent = `${question}`;
+    inputContent.innerHTML = 
+        `<button id="A">${a}</button>
+        <button id="B">${b}</button>
+        <button id="C">${c}</button>
+        <button id="D">${d}</button>`
+}
+
 startButton.addEventListener("click", function() {
     var timer = setInterval(function (){
-        countdown.textContent = `Timer: ${secondsLeft}`;
         secondsLeft--;
+        countdown.textContent = `Timer: ${secondsLeft}`;
         if (secondsLeft === 0) {clearInterval(timer)};
     }, 1000);
-    questionContent.textContent = "Commonly used data types do NOT include:";
-    inputContent.innerHTML = 
-        `<ul>
-            <li><button id="A1">1.Strings</button></li>
-            <li><button id="A2">2.Booleans</button></li>
-            <li><button id="A3">3.Alerts</button></li>
-            <li><button id="A4">4.Numbers</button></li>
-        </ul>`
+    nextQuestion("Commonly used data types do NOT include:","Strings", "Booleans","Alerts", "Numbers")
+        
 })
