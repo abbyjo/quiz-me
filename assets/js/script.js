@@ -30,6 +30,10 @@ startButton.addEventListener("click", function() {
         countdown.textContent = `Timer: ${secondsLeft}`;
         if (secondsLeft === 0) {clearInterval(timer)};
     }, 1000);
-    nextQuestion("Commonly used data types do NOT include:","Strings", "Booleans","Alerts", "Numbers")
+    nextQuestion("Commonly used data types do NOT include:","Strings", "Booleans","Alerts", "Numbers");
+    var answers = document.querySelectorAll("button")
+    for (i=0; i<answers.length; i++) {answers[i].addEventListener("click", function(){
+        console.log("girlhelp")
+})}
         
 })
