@@ -6,7 +6,7 @@ var inputContent = document.querySelector("#input");
 var secondsLeft = 100
 var totalScore = 100
 
-//STARTING OVER GOD DAMN IT 
+//Questions 
 const questions =[
     {
         question: "QUESTION 1",
@@ -55,7 +55,15 @@ const questions =[
     }
 ];
 
-
+//Start Button + Timer 
+startButton.addEventListener("click", function()
+{
+    var timer = setInterval(function ()
+        {secondsLeft--;
+        countdown.textContent = `Timer: ${secondsLeft}`;
+        if (secondsLeft === 0) {clearInterval(timer)};
+        }, 1000)
+});
 
 
 
