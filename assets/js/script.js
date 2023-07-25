@@ -13,8 +13,7 @@ function nextQuestion(question,a,b,c,d) {
         `<button id="A">${a}</button>
         <button id="B">${b}</button>
         <button id="C">${c}</button>
-        <button id="D">${d}</button>
-        <h2 class="result"></h2>`
+        <button id="D">${d}</button>`
 };
 
 //Start of Quiz
@@ -24,6 +23,7 @@ startButton.addEventListener("click", function() {
         countdown.textContent = `Timer: ${secondsLeft}`;
         if (secondsLeft === 0) {clearInterval(timer)};
     }, 1000);
+    //Question 1
     nextQuestion("Commonly used data types do NOT include:","Strings", "Booleans","Alerts", "Numbers");
     var answers = document.querySelectorAll("button")
     for (i=0; i<answers.length; i++) {answers[i].addEventListener("click", function(event){
@@ -34,7 +34,8 @@ startButton.addEventListener("click", function() {
             results.textContent = "Wrong~";
             secondsLeft-=10;
             totalScore -= 10;
-        }
+        };
+    //Question 2   
 })}
         
 })
