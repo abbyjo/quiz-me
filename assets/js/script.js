@@ -32,8 +32,10 @@ startButton.addEventListener("click", function() {
     }, 1000);
     nextQuestion("Commonly used data types do NOT include:","Strings", "Booleans","Alerts", "Numbers");
     var answers = document.querySelectorAll("button")
-    for (i=0; i<answers.length; i++) {answers[i].addEventListener("click", function(){
-        console.log("girlhelp")
+    for (i=0; i<answers.length; i++) {answers[i].addEventListener("click", function(event){
+        let selectedBtn = event.target;
+        if (selectedBtn.id === "C"){console.log("Bingo bongo")}
+        else {console.log("girlhelp")}
 })}
         
 })
