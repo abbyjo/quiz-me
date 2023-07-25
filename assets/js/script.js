@@ -4,6 +4,7 @@ var questionContent = document.querySelector("#content");
 var countdown = document.querySelector("#timer");
 var inputContent = document.querySelector("#input");
 var secondsLeft = 100
+var totalScore = 100
 
 //Function for adding new questions 
 function nextQuestion(question,a,b,c,d) {
@@ -27,8 +28,13 @@ startButton.addEventListener("click", function() {
     var answers = document.querySelectorAll("button")
     for (i=0; i<answers.length; i++) {answers[i].addEventListener("click", function(event){
         let selectedBtn = event.target;
-        if (selectedBtn.id === "C"){console.log("Bingo bongo")}
-        else {console.log("girlhelp")}
+        let results = document.querySelector(".result")
+        if (selectedBtn.id === "C"){results.textContent = "Right!"}
+        else {
+            results.textContent = "Wrong~";
+            secondsLeft-=10;
+            totalScore -= 10;
+        }
 })}
         
 })
