@@ -12,7 +12,8 @@ function nextQuestion(question,a,b,c,d) {
         `<button id="A">${a}</button>
         <button id="B">${b}</button>
         <button id="C">${c}</button>
-        <button id="D">${d}</button>`
+        <button id="D">${d}</button>
+        <h2 class="result"></h2>`
 };
 
 //Start of Quiz

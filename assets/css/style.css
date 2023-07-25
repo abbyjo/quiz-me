@@ -43,3 +43,9 @@ button:hover {
 #input button{
     margin: 5%;
 }
+.result {
+    color:#b19fb4;
+    font-style: italic;
+    text-decoration:overline dashed #b47db8;
+    font-size:175%;
+}
