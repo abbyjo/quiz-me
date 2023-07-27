@@ -1,5 +1,5 @@
 //Declarations 
-var startButton = document.querySelector("#button");
+var startButton = document.querySelector("#startButton");
 var questionContent = document.querySelector("#content");
 var countdown = document.querySelector("#timer");
 var inputContent = document.querySelector("#input");
@@ -54,6 +54,26 @@ const questions =[
         ]
     }
 ];
+var currentIndex = 0;
+function showQuestion() {
+    let currentQ = questions[currentIndex];
+    questionContent.textContent = currentQ.question;
+    currentQ.answers.forEach(answer => {
+        let button = document.createElement("button");
+        button.innerHTML = answer.text;
+        inputContent.appendChild(button)
+    })
+}
+
+
+
+
+
+
+
+
+
+
 
 //Start Button + Timer 
 startButton.addEventListener("click", function()
@@ -62,8 +82,11 @@ startButton.addEventListener("click", function()
         {secondsLeft--;
         countdown.textContent = `Timer: ${secondsLeft}`;
         if (secondsLeft === 0) {clearInterval(timer)};
-        }, 1000)
-});
+        }, 1000);
+    inputContent.innerHTML = "";
+    showQuestion()
+}
+);
 
 
 
