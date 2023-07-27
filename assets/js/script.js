@@ -5,6 +5,7 @@ var countdown = document.querySelector("#timer");
 var inputContent = document.querySelector("#input");
 var secondsLeft = 100
 var totalScore = 100
+var currentIndex = 0;
 
 //Questions 
 const questions =[
@@ -54,26 +55,36 @@ const questions =[
         ]
     }
 ];
-var currentIndex = 0;
+//Shows quiz questions + adds click event to each answer button
 function showQuestion() {
+    clearScreen();
     let currentQ = questions[currentIndex];
     questionContent.textContent = currentQ.question;
     currentQ.answers.forEach(answer => {
         let button = document.createElement("button");
         button.innerHTML = answer.text;
-        inputContent.appendChild(button)
+        inputContent.appendChild(button);
+        if (answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
     })
+};
+
+//Validates user answer choice + displays  result
+function selectAnswer(event){
+    let selectedBtn = event.target;
+    let results = document.querySelector(".result");
+    let isCorrect = selectedBtn.dataset.correct;
+    if (isCorrect) {results.textContent = "Right!"}
+    else {
+        results.textContent = "Wrong~";
+        secondsLeft-=10;
+        totalScore -= 10;
+        };
 }
-
-
-
-
-
-
-
-
-
-
+//Clears screen of previous question and answer buttons
+function clearScreen(){inputContent.innerHTML = ""};
 
 //Start Button + Timer 
 startButton.addEventListener("click", function()
@@ -83,7 +94,7 @@ startButton.addEventListener("click", function()
         countdown.textContent = `Timer: ${secondsLeft}`;
         if (secondsLeft === 0) {clearInterval(timer)};
         }, 1000);
-    inputContent.innerHTML = "";
+    clearScreen();
     showQuestion()
 }
 );
