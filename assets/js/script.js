@@ -3,10 +3,12 @@ var startButton = document.querySelector("#startButton");
 var questionContent = document.querySelector("#content");
 var countdown = document.querySelector("#timer");
 var inputContent = document.querySelector("#input");
+var scoreList = document.querySelector("#scorelist");
 var secondsLeft = 100
 var totalScore = 100
 var currentIndex = 0;
 var results = document.querySelector(".result");
+
 
 //Questions 
 const questions =[
@@ -107,16 +109,31 @@ function gameOver() {
         results.appendChild(submit)
     submit.addEventListener("click", function(event){
         event.preventDefault();
-        var player ={
-            username:document.querySelector("input").value,
-            score: totalScore
-        };
-        localStorage.setItem("player", JSON.stringify(player));
+        saveScore();
         seeScores();
     })
-
+}
+function saveScore (){
+    var user={
+        username:document.querySelector("input").value,
+        score: totalScore
+    };
+    localStorage.setItem('user', JSON.stringify(user));
+}
+//View scores! 
+function seeScores() {
+    clearScreen();
+    results.innerHTML= "";
+    questionContent.innerHTML = `✨ Recent Scores ✨`;
+    scoreChart = document.createElement("li")
+    scoreList.appendChild(scoreChart);
+    var highScore = JSON.parse(localStorage.getItem('user'));
+    if (highScore !== null) {
+        scoreChart.innerHTML = `${highScore.username} - ${highScore.score}`
+    }
 
 }
+
 
 //Start Button + Timer 
 startButton.addEventListener("click", function()
