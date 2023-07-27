@@ -4,6 +4,7 @@ var questionContent = document.querySelector("#content");
 var countdown = document.querySelector("#timer");
 var inputContent = document.querySelector("#input");
 var scoreList = document.querySelector("#scorelist");
+var scoresLink = document.querySelector("#scores");
 var secondsLeft = 100
 var totalScore = 100
 var currentIndex = 0;
@@ -133,8 +134,6 @@ function seeScores() {
     }
 
 }
-
-
 //Start Button + Timer 
 startButton.addEventListener("click", function()
 {
@@ -147,3 +146,5 @@ startButton.addEventListener("click", function()
     showQuestion()
 }
 );
+//Shows logged highscores upon clicking link
+scoresLink.addEventListener("click", seeScores)

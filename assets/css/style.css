@@ -40,6 +40,10 @@ button:hover {
     color:#b47db8;
     font-weight: bolder;
 }
+#scores:hover {
+    text-decoration: underline;
+    cursor:pointer;
+}
 #input button{
     margin: 5%;
 }
