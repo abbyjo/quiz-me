@@ -49,3 +49,11 @@ button:hover {
     text-decoration:overline dashed #b47db8;
     font-size:175%;
 }
+#scorelist li {
+    background-color: #e48dbd;
+    font-size:150%;
+    color: white;
+    border-radius: 19px;
+    padding: 10px;
+    margin:20px;
+}
