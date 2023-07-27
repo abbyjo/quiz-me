@@ -71,7 +71,7 @@ function showQuestion() {
     })
 };
 
-//Validates user answer choice + displays  result
+//Validates user answer choice, displays result and moves to next question
 function selectAnswer(event){
     let selectedBtn = event.target;
     let results = document.querySelector(".result");
@@ -82,7 +82,12 @@ function selectAnswer(event){
         secondsLeft-=10;
         totalScore -= 10;
         };
-}
+    currentIndex++;
+    if (currentIndex < questions.length){
+        showQuestion();
+    } else { gameOver()}
+};
+
 //Clears screen of previous question and answer buttons
 function clearScreen(){inputContent.innerHTML = ""};
 
