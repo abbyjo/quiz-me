@@ -68,6 +68,9 @@ input {
     padding: 10px;
 }
 
+input:hover {
+    border-color: white;
+}
 .restartBtn {
     padding: 10px 15px;
     font-size: 65%;
