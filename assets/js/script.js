@@ -14,48 +14,93 @@ var results = document.querySelector(".result");
 //Questions 
 const questions =[
     {
-        question: "QUESTION 1",
+        question: "Commonly used data types do NOT include:",
         answers: [
-            {text: "A", correct: true},
-            {text: "B", correct: false},
-            {text: "C", correct: false},
-            {text: "D", correct: false},
+            {text: "Alerts", correct: true},
+            {text: "Booleans", correct: false},
+            {text: "Numbers", correct: false},
+            {text: "Strings", correct: false},
         ]
     },
     {
-        question: "QUESTION 2",
+        question: "Inside the HTML document, where do you place your JavaScript code?",
         answers: [
-            {text: "A", correct: false},
-            {text: "B", correct: false},
-            {text: "C", correct: true},
-            {text: "D", correct: false},
+            {text: "Inside the head element", correct: false},
+            {text: "Inside the link element", correct: false},
+            {text: "Inside the script element", correct: true},
+            {text: "In the footer element", correct: false},
         ]
     },
     {
-        question: "QUESTION 3",
+        question: "What operator is used to assign a value to a declared variable?",
         answers: [
-            {text: "A", correct: false},
-            {text: "B", correct: true},
-            {text: "C", correct: false},
-            {text: "D", correct: false},
+            {text: "Double-equal (==)", correct: false},
+            {text: "Equal sign (=)", correct: true},
+            {text: "Question mark (?)", correct: false},
+            {text: "Colon (:)", correct: false},
         ]
     },
     {
-        question: "QUESTION 4",
+        question: "How do we declare a conditional statement in JavaScript?",
         answers: [
-            {text: "A", correct: false},
-            {text: "B", correct: false},
-            {text: "C", correct: false},
-            {text: "D", correct: true},
+            {text: "while loop", correct: false},
+            {text: "for loop", correct: false},
+            {text: "difference...between", correct: false},
+            {text: "if...else", correct: true},
         ]
     },
     {
-        question: "QUESTION 5",
+        question: "What are the two types of scope JavaScript uses?",
         answers: [
-            {text: "A", correct: false},
-            {text: "B", correct: true},
-            {text: "C", correct: false},
-            {text: "D", correct: false},
+            {text: "Surrounding and Inner", correct: false},
+            {text: "Global and Local", correct: true},
+            {text: "Abroad and Local", correct: false},
+            {text: "Outside and Inside", correct: false},
+        ]
+    },
+    {
+        question: "How do we access a value stored in an object?",
+        answers: [
+            {text: "Dot notation, Bracket notation", correct: true},
+            {text: "Equal notation, Abstract notation", correct: false},
+            {text: "Dot notation, Curl bracket notation", correct: false},
+            {text: "Period notation, Square bracket notation", correct: false},
+        ]
+    },
+    {
+        question: "What is an object method?",
+        answers: [
+            {text: "Keys in an object that have a number assigned to it", correct: false},
+            {text: "An array saved inside of an object", correct: false},
+            {text: "A function that takes an object for an argument", correct: false},
+            {text: "A function associated with an object", correct: true},
+        ]
+    },
+    {
+        question: "How do we stop a loop from from repeating indefinitely?",
+        answers: [
+            {text: "We have to explicitly end the loop with the break keyword.", correct: false},
+            {text: "A loop will stop executing when the condition is true.", correct: false},
+            {text: "A loop will stop executing when the condition is false", correct: true},
+            {text: "When we have iterated through half of the condition.", correct: false},
+        ]
+    },
+    {
+        question: "From the given array which index is the letter 'b' on? ['a', 'b', 'c', 'd']",
+        answers: [
+            {text: "1", correct: true},
+            {text: "0", correct: false},
+            {text: "2", correct: false},
+            {text: "3", correct: false},
+        ]
+    },
+    {
+        question: "The condition in an if/else staatement is enclosed with___:",
+        answers: [
+            {text: "Quotes", correct: false},
+            {text: "Curly brackets", correct: false},
+            {text: "Parenthesis", correct: true},
+            {text: "Square brackets", correct: false},
         ]
     }
 ];
@@ -132,7 +177,6 @@ function seeScores() {
     if (highScore !== null) {
         scoreChart.innerHTML = `${highScore.username} - ${highScore.score}`
     }
-
 }
 //Start Button + Timer 
 startButton.addEventListener("click", function()
