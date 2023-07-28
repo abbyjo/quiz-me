@@ -67,3 +67,8 @@ input {
     border-radius: 5px;
     padding: 10px;
 }
+
+.restartBtn {
+    padding: 10px 15px;
+    font-size: 65%;
+}

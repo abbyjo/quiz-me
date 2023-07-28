@@ -59,15 +59,6 @@ const questions =[
         ]
     },
     {
-        question: "How do we access a value stored in an object?",
-        answers: [
-            {text: "Dot notation, Bracket notation", correct: true},
-            {text: "Equal notation, Abstract notation", correct: false},
-            {text: "Dot notation, Curl bracket notation", correct: false},
-            {text: "Period notation, Square bracket notation", correct: false},
-        ]
-    },
-    {
         question: "What is an object method?",
         answers: [
             {text: "Keys in an object that have a number assigned to it", correct: false},
@@ -95,7 +86,7 @@ const questions =[
         ]
     },
     {
-        question: "The condition in an if/else staatement is enclosed with___:",
+        question: "The condition in an if/else statement is enclosed with___:",
         answers: [
             {text: "Quotes", correct: false},
             {text: "Curly brackets", correct: false},
@@ -153,6 +144,11 @@ function gameOver() {
         submit.setAttribute("type", "submit");
         submit.setAttribute("value", "Submit");
         results.appendChild(submit)
+    let restart = document.createElement("button");
+        results.appendChild(restart);
+        restart.setAttribute("class", "restartBtn");
+        restart.innerHTML = 'Try again?'
+    restart.addEventListener("click", function(){location.reload()})
     submit.addEventListener("click", function(event){
         event.preventDefault();
         saveScore();
