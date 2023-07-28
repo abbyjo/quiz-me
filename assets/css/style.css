@@ -45,7 +45,7 @@ button:hover {
     cursor:pointer;
 }
 #input button{
-    margin: 5%;
+    margin: 25px;
 }
 .result {
     color:#b19fb4;
@@ -60,4 +60,10 @@ button:hover {
     border-radius: 19px;
     padding: 10px;
     margin:20px;
+}
+input {
+    margin: 10px;
+    background-color: #f0ead1;
+    border-radius: 5px;
+    padding: 10px;
 }
