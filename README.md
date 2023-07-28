@@ -9,7 +9,7 @@ N/A
 
 ## Usage 
 
-Click the link in your favorite browser to open the quiz!<br>
+Open <a href="https://abbyjo.github.io/quiz-me/">this link</a> in your favorite browser to open the quiz!<br>
 Upon clicking the start button the timer will begin counting down and the quiz will officially start. For each question, once an answer is clicked you will be taken to the next one and the correctness of your prior choice will be displayed at the bottom of each new question. For every incorrect answer 10 points will be deducted from both the time remaining and your total score. Once the quiz is complete you can save your most recent score and try again~   
  
   ![Screenshot of simple quiz landing page](assets/images/screenshot.png)
